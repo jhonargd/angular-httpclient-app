@@ -22,7 +22,6 @@ export class MovieUpdateComponent implements OnInit {
   ngOnInit() { 
     this.restApi.getMovie(this.id).subscribe((data: {}) => {
       this.movieData = data[0]; 
-      console.log(this.movieData)
     })
   }
 
@@ -32,6 +31,7 @@ export class MovieUpdateComponent implements OnInit {
       if(this.movieData.genre != ''){
         if(window.confirm('Esta seguro de acyualizar los datos?')){
           this.restApi.updateMovie(this.id, this.movieData).subscribe(data => {
+            console.log(data)
             this.router.navigate(['/movie-list'])
           })
         }
