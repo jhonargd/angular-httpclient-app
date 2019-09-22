@@ -1,0 +1,17 @@
+.edit{
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color:blue;   
+}
+
+.delete{
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background-color:red;   
+}
