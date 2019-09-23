@@ -6,22 +6,32 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Tecnologias utilizadas
+Angular v8: logica del proyecto
+Bootstrap 4: diseño de interfaces graficas
+Html: diseño de interfaces graficas
+Css: diseño de interfaces graficas
+Angular material: diseño de interfaces graficas y componentes basados en la pagina de Angular
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Componentes
 
-## Build
+Movie-create: Componente desarrollado para realizar el ingreso de las peliculas. route: DOMINIO:PUERTO/create-movie
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Movie-update: Componente desarrollado para recibir el detalle de una pelicula y realizar la 
+actualizacion de sus valores. route: DOMINIO:PUERTO/update-movie/:id
 
-## Running unit tests
+movie-list: Componente desarrollado para mostrar la lista de peliculas almacenadas en sel servidor, donde se podra seleccionar si desea actualizar sus valores o eliminarlo de la lista. route: DOMINIO:PUERTO/movie-list
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+menu: Componente desarrollado para realizar el menu de navegacion de la aplicacion web. route: DOMINIO:PUERTO/
 
-## Running end-to-end tests
+## Servicios API REST (Ver https://github.com/jhonargd/angular-httpclient-app/blob/master/src/app/shared/rest-api.service.ts)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Crear una pelicula: Consume el servicio POST dada por la ruta: http://35.232.123.59:4000/items, la cual sera consumida en el archivo: https://github.com/jhonargd/angular-httpclient-app/blob/master/src/app/movie-create/movie-create.component.ts
 
-## Further help
+Listar Peliculas: Consume el servicio GET dada la ruta http://35.232.123.59:4000/items, la cual sera consumida en el archivo: https://github.com/jhonargd/angular-httpclient-app/blob/master/src/app/movie-list/movie-list.component.ts
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Leer el detalle de una pelicula: Consume el servicio GET dada la ruta http://35.232.123.59:4000/items/id, la cual sera consumida en el archivo: https://github.com/jhonargd/angular-httpclient-app/blob/master/src/app/movie-update/movie-update.component.ts
+
+Actualizar detalle de una pelicula: Consume el servicio PUT dada la ruta http://35.232.123.59:4000/items/id, la cual sera consumida en el archivo: https://github.com/jhonargd/angular-httpclient-app/blob/master/src/app/movie-update/movie-update.component.ts
+
+Eliminar Pelicula: Consume el servicio DELETE dada la ruta http://35.232.123.59:4000/items/id, la cual sera consumida en el archivo https://github.com/jhonargd/angular-httpclient-app/blob/master/src/app/movie-list/movie-list.component.ts
